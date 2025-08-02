@@ -17,9 +17,9 @@ console.log('#9. JavaScript homework example file')
  */
 
 function handleButtonClick(buttonId, message) {
-  const button = document.getElementById(buttonId);
-  button.textContent = message;
-  button.addEventListener('click', function(e) {
+  const button = document.getElementById(buttonId)
+  button.textContent = message
+  button.addEventListener('click', function (e) {
     console.log(message)
   })
 }
@@ -42,11 +42,11 @@ function handleButtonClick(buttonId, message) {
  */
 
 function trackMousePosition() {
-  document.addEventListener('mousemove', function(e) {
-    console.log(`Mouse X: ${e.clientX}, Mouse Y: ${e.clientY}`);
-    });
+  document.addEventListener('mousemove', function (e) {
+    console.log(`Mouse X: ${e.clientX}, Mouse Y: ${e.clientY}`)
+  })
 }
- console.log(trackMousePosition())
+console.log(trackMousePosition())
 
 // console.log(trackMousePosition())
 
@@ -78,17 +78,15 @@ function createTestList() {
 createTestList()
 
 function setupEventDelegation(selector) {
-  const element = document.querySelector(selector);
+  const element = document.querySelector(selector)
 
-  element.addEventListener('click', function(e){
+  element.addEventListener('click', function (e) {
     if (e.target.tagName === 'LI') {
-    console.log(`Item clicked: ${e.target.textContent.trim()}`)
+      console.log(`Item clicked: ${e.target.textContent.trim()}`)
     }
   })
-
 }
 setupEventDelegation('#testList')
-
 
 // setupEventDelegation('#testList')
 
